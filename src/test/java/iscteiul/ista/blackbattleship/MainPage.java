@@ -1,14 +1,15 @@
-package iscteiul.ista.blackbattleship;
+    package iscteiul.ista.blackbattleship;
 
-import com.codeborne.selenide.SelenideElement;
+    import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+    import static com.codeborne.selenide.Selenide.$;
+    import static com.codeborne.selenide.Selenide.$x;
 
-// page_url = https://www.jetbrains.com/
-public class MainPage {
-    public SelenideElement seeDeveloperToolsButton = $x("//*[@data-test-marker='Developer Tools']");
-    public SelenideElement findYourToolsButton = $x("//*[@data-test='suggestion-action']");
-    public SelenideElement toolsMenu = $x("//div[@data-test='main-menu-item' and @data-test-marker = 'Developer Tools']");
-    public SelenideElement searchButton = $("[data-test='site-header-search-action']");
-}
+    // page_url = https://www.jetbrains.com/
+    public class MainPage {
+        public SelenideElement menuButton = $("[data-test='site-header-open-mobile-main-menu-action']");
+        public SelenideElement searchButton = $("[data-test='site-header-mobile-search-action']");
+        public SelenideElement toolsMenu = $("[data-test='mobile-main-menu-item-action']");
+        public SelenideElement seeDeveloperToolsButton = $x("//nav//a[@href='/products/'] | //div[contains(@class,'menu')]//a[@href='/products/']");
+    }
+
