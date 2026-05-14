@@ -4,24 +4,25 @@
 123002 - Rui Coelho
 123901 - Dinis Silva
 
-# Scrum Product Backlog - Battleship (papergames.io)
 
-## 1. Interface Inicial e Perfil (Prioridade de Teste - Alta)
-* **US01 - Definição de Nickname:** Enquanto utilizador, quero definir um *nickname* no ecrã inicial para ser devidamente identificado nas partidas.
-* **US02 - Consulta de Instruções:** Enquanto utilizador, quero visualizar a secção de instruções na página principal para compreender as regras desta versão do jogo.
-* **US03 - Visualização de Estatísticas:** Enquanto jogador, quero visualizar a barra de progresso no meu perfil com o meu nível e rácio de vitórias/derrotas.
-* **US04 - Tabelas de Classificação:** Enquanto jogador, quero aceder aos rankings online (diário e mensal) para comparar o meu desempenho com a comunidade.
+##  1. Acesso e Identificação
+*[ ] **US01 – Autenticação (Login)**: Enquanto utilizador registado, quero introduzir as minhas credenciais para aceder à minha conta e progresso.
+*[ ] **US02 – Definição de Nickname**: Enquanto utilizador, quero definir um nome de exibição ao entrar no jogo para ser identificado pelos adversários.
+*[ ] **US03 – Consulta de Instruções**: Enquanto novo jogador, quero ler as regras na página principal para compreender a mecânica do jogo.
+*[] **US04 - Tabelas de Classificação:** Enquanto jogador, quero aceder aos rankings online (diário e mensal) para comparar o meu desempenho com a comunidade.
 
-## 2. Seleção de Modos de Jogo (Prioridade de Teste - Alta)
-* **US05 - Jogo contra Robot:** Enquanto utilizador, quero selecionar a opção "Jogar contra o Bot" para iniciar imediatamente uma partida de treino.
-* **US06 - Convite para Jogo Amigável:** Enquanto jogador, quero selecionar "Jogar com Amigo" para gerar um link de convite e iniciar uma partida privada.
-* **US07 - Matchmaking Aleatório:** Enquanto jogador, quero selecionar "Jogar Online" para entrar na fila de emparelhamento automático com outro jogador.
+##  2. Modos de Jogo e Social
+* [ ] **US05 – Jogo contra Robot**: Enquanto utilizador, quero selecionar o modo de treino contra a IA para praticar sem outros jogadores.
+* [ ] **US06 – Convite para Amigo**: Enquanto jogador, quero gerar um link de convite direto para jogar uma partida privada com um colega.
+* [ ] **US07 – Utilização do Chat**: Enquanto jogador, quero enviar mensagens durante a partida para comunicar com o meu oponente.
+* [ ] **US08- Matchmaking Aleatório:** Enquanto jogador, quero selecionar "Jogar Online" para entrar na fila de emparelhamento automático com outro jogador.
 
-## 3. Jogabilidade e Combate Base (Prioridade de Teste - Média/Baixa)
-* **US08 - Posicionamento Automático:** Enquanto jogador, ao iniciar a partida, quero que o sistema posicione a minha frota automaticamente para acelerar o arranque do jogo.
-* **US09 - Disparo na Grelha:** Enquanto jogador, durante o meu turno, quero clicar numa célula da grelha adversária para efetuar um disparo.
-* **US10 - Painel de Estado da Frota:** Enquanto jogador, após cada disparo, quero que o painel lateral atualize visualmente o estado dos navios (flutuantes e afundados).
-* **US11 - Utilização de Armas Especiais:** Enquanto jogador, no meu turno, quero ativar uma habilidade de dano em área (como o formato em cruz ou quadrado) que consome a minha jogada.
 
-## 4. Fim de Partida
-* **US12 - Ecrã de Resultados:** Enquanto jogador, quando uma frota for destruída, quero ver um painel com o resultado final e os botões de decisão (Jogar Novamente ou Menu) com um temporizador decrescente.
+
+##  3. Mecânicas de Combate (Core Gameplay)
+* [ ] **US09 – Execução de Disparos**: Enquanto jogador, quero clicar na grelha adversária para realizar ataques e tentar afundar navios.
+* [ ] **US10 – Uso de Armas Especiais**: Enquanto jogador, quero ativar mísseis de área (ex: Míssil Grande) para atingir vários quadrados ao mesmo tempo.
+
+##  4. Estatísticas e Competição
+* [ ] **US11 – Histórico de Partidas**: Enquanto utilizador, quero consultar a lista dos meus jogos anteriores e os resultados obtidos.
+* [ ] **US12 – Criação de Torneios**: Enquanto organizador, quero configurar novos campeonatos na plataforma para gerir competições.
