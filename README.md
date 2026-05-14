@@ -25,7 +25,3 @@
 
 ## 4. Fim de Partida
 * **US12 - Ecrã de Resultados:** Enquanto jogador, quando uma frota for destruída, quero ver um painel com o resultado final e os botões de decisão (Jogar Novamente ou Menu) com um temporizador decrescente.
-
-
-##5. Login
-* *US15 – Autenticação de Utilizador (Login)**: Enquanto utilizador registado, quero introduzir as minhas credenciais (email/username e palavra-passe) para aceder à minha conta personalizada e sincronizar o meu progresso.
