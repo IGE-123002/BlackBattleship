@@ -4,24 +4,27 @@
 123002 - Rui Coelho
 123901 - Dinis Silva
 
-## 1. Gestão de Utilizador e Social
-* [ ] **US01 – Definição de Nickname**: Enquanto utilizador, quero definir um *nickname* ao entrar no jogo para ser devidamente identificado nas partidas.
-* [ ] **US02 – Convite para Jogo Amigável**: Enquanto jogador, quero gerar e enviar um link de convite para um colega para podermos realizar uma partida privada.
-* [ ] **US03 – Consulta de Instruções**: Enquanto utilizador, quero ler as instruções na página principal para compreender as regras e diferenças desta versão do jogo.
-* [ ] **US04 – Utilização do Chat**: Enquanto jogador, quero enviar mensagens para interagir com o meu adversário ou outros jogadores durante a sessão.
+# Scrum Product Backlog - Battleship (papergames.io)
 
- ## 2. Modos de Jogo e IA
-* [ ] **US05 – Jogo contra Robot**: Enquanto utilizador, quero ter a opção de jogar contra um robô para praticar as minhas estratégias de forma individual.
-* [ ] **US06 – Matchmaking Aleatório**: Enquanto jogador, quero entrar numa fila de espera para ser emparelhado automaticamente com um adversário online.
-* [ ] **US07 – Posicionamento de Frota**: Enquanto jogador, quero organizar os meus navios na grelha antes de iniciar o combate, garantindo uma configuração estratégica.
+## 1. Interface Inicial e Perfil (Prioridade de Teste - Alta)
+* **US01 - Definição de Nickname:** Enquanto utilizador, quero definir um *nickname* no ecrã inicial para ser devidamente identificado nas partidas.
+* **US02 - Consulta de Instruções:** Enquanto utilizador, quero visualizar a secção de instruções na página principal para compreender as regras desta versão do jogo.
+* **US03 - Visualização de Estatísticas:** Enquanto jogador, quero visualizar a barra de progresso no meu perfil com o meu nível e rácio de vitórias/derrotas.
+* **US04 - Tabelas de Classificação:** Enquanto jogador, quero aceder aos rankings online (diário e mensal) para comparar o meu desempenho com a comunidade.
 
-##  3. Mecânicas de Combate (Core Gameplay)
-* [ ] **US08 – Sistema de Disparos**: Enquanto jogador, quero realizar disparos na grelha adversária seguindo o sistema de turnos para tentar afundar a frota inimiga.
-* [ ] **US09 – Feedback de Impacto**: Enquanto jogador, quero receber feedback visual imediato após cada disparo para saber se atingi um alvo ou a água.
-* [ ] **US10 – Utilização de Armas Especiais**: Enquanto jogador, quero utilizar mísseis de dano de área para atingir múltiplos quadrados da grelha simultaneamente.
-* [ ] **US11 – Condição de Vitória**: Enquanto jogador, quero que o sistema declare o fim da partida e o vencedor assim que todos os navios de uma frota sejam destruídos.
+## 2. Seleção de Modos de Jogo (Prioridade de Teste - Alta)
+* **US05 - Jogo contra Robot:** Enquanto utilizador, quero selecionar a opção "Jogar contra o Bot" para iniciar imediatamente uma partida de treino.
+* **US06 - Convite para Jogo Amigável:** Enquanto jogador, quero selecionar "Jogar com Amigo" para gerar um link de convite e iniciar uma partida privada.
+* **US07 - Matchmaking Aleatório:** Enquanto jogador, quero selecionar "Jogar Online" para entrar na fila de emparelhamento automático com outro jogador.
 
-##  4. Competições e Estatísticas
+## 3. Jogabilidade e Combate Base (Prioridade de Teste - Média/Baixa)
+* **US08 - Posicionamento Automático:** Enquanto jogador, ao iniciar a partida, quero que o sistema posicione a minha frota automaticamente para acelerar o arranque do jogo.
+* **US09 - Disparo na Grelha:** Enquanto jogador, durante o meu turno, quero clicar numa célula da grelha adversária para efetuar um disparo.
+* **US10 - Painel de Estado da Frota:** Enquanto jogador, após cada disparo, quero que o painel lateral atualize visualmente o estado dos navios (flutuantes e afundados).
+* **US11 - Utilização de Armas Especiais:** Enquanto jogador, no meu turno, quero ativar uma habilidade de dano em área (como o formato em cruz ou quadrado) que consome a minha jogada.
+
+## 4. Fim de Partida
+* **US12 - Ecrã de Resultados:** Enquanto jogador, quando uma frota for destruída, quero ver um painel com o resultado final e os botões de decisão (Jogar Novamente ou Menu) com um temporizador decrescente.
 * [ ] **US12 – Criação de Torneios**: Enquanto organizador, quero aceder à funcionalidade de criação de torneios para gerir campeonatos entre múltiplos jogadores.
 * [ ] **US13 – Histórico de Partidas**: Enquanto jogador, quero consultar a página de resultados para analisar o meu desempenho em jogos anteriores.
 * [ ] **US14 – Ranking Global (ELO)**: Enquanto jogador competitivo, quero visualizar a minha pontuação e posição na tabela de classificação geral da comunidade.
