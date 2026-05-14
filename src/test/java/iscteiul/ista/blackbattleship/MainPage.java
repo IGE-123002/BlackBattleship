@@ -1,14 +1,21 @@
 package iscteiul.ista.blackbattleship;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
-// page_url = https://www.jetbrains.com/
 public class MainPage {
-    public SelenideElement seeDeveloperToolsButton = $x("//*[@data-test-marker='Developer Tools']");
-    public SelenideElement findYourToolsButton = $x("//*[@data-test='suggestion-action']");
-    public SelenideElement toolsMenu = $x("//div[@data-test='main-menu-item' and @data-test-marker = 'Developer Tools']");
+    public SelenideElement acceptCookiesButton = $x("//button[contains(., 'Accept')]");
+
     public SelenideElement searchButton = $("[data-test='site-header-search-action']");
+    public SelenideElement searchInput = $("[data-test-id='search-input']");
+
+    public ElementsCollection developerToolsTexts = $$x("//*[contains(text(), 'Developer Tools')]");
+
+    // NOVO: Muito mais simples. Encontra todos os links que vão ter à página de produtos!
+    public ElementsCollection findYourToolsLinks = $$("a[href*='/products']");
 }
