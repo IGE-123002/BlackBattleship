@@ -25,7 +25,3 @@
 
 ## 4. Fim de Partida
 * **US12 - Ecrã de Resultados:** Enquanto jogador, quando uma frota for destruída, quero ver um painel com o resultado final e os botões de decisão (Jogar Novamente ou Menu) com um temporizador decrescente.
-* [ ] **US12 – Criação de Torneios**: Enquanto organizador, quero aceder à funcionalidade de criação de torneios para gerir campeonatos entre múltiplos jogadores.
-* [ ] **US13 – Histórico de Partidas**: Enquanto jogador, quero consultar a página de resultados para analisar o meu desempenho em jogos anteriores.
-* [ ] **US14 – Ranking Global (ELO)**: Enquanto jogador competitivo, quero visualizar a minha pontuação e posição na tabela de classificação geral da comunidade.
-
