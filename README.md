@@ -9,7 +9,7 @@
 * [ ] **US01 – Autenticação (Login)**: Enquanto utilizador registado, quero introduzir as minhas credenciais para aceder à minha conta e progresso.
 * [ ] **US02 – Definição de Nickname**: Enquanto utilizador, quero definir um nome de exibição ao entrar no jogo para ser identificado pelos adversários.
 * [ ] **US03 – Consulta de Instruções**: Enquanto novo jogador, quero ler as regras na página principal para compreender a mecânica do jogo.
-* [ ] **US04 - Tabelas de Classificação:** Enquanto jogador, quero aceder aos rankings online (diário e mensal) para comparar o meu desempenho com a comunidade.
+* [ ] **US04 - Tabelas de Classificação:** Enquanto jogador, quero aceder aos rankings online para comparar o meu desempenho com a comunidade.
 
 ##  2. Modos de Jogo e Social
 * [ ] **US05 – Jogo contra Robot**: Enquanto utilizador, quero selecionar o modo de treino contra a IA para praticar sem outros jogadores.
