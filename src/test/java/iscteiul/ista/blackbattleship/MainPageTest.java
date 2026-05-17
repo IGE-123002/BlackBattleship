@@ -5,6 +5,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import iscteiul.ista.blackbattleship.pages.JetBrainsMainPage;
 import org.junit.jupiter.api.*;
 
 import java.time.Duration;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageTest {
-    MainPage mainPage = new MainPage();
+    JetBrainsMainPage mainPage = new JetBrainsMainPage();
 
     @BeforeAll
     public static void setUpAll() {
