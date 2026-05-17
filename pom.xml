@@ -11,8 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>25</maven.compiler.target>
-        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <junit.version>5.11.3</junit.version>
         <aspectj.version>1.9.23</aspectj.version>
         <allure.version>2.29.0</allure.version>
@@ -35,7 +35,7 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>7.6.0</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
