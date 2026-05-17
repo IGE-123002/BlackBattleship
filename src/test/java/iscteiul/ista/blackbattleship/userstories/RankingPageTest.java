@@ -1,13 +1,18 @@
-package iscteiul.ista.blackbattleship;
+package iscteiul.ista.blackbattleship.userstories;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import iscteiul.ista.blackbattleship.RankingPage;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
+
+import iscteiul.ista.blackbattleship.LoginPage;
+import iscteiul.ista.blackbattleship.ChatPage;
+import iscteiul.ista.blackbattleship.MatchHistoryPage;
 
 public class RankingPageTest {
 

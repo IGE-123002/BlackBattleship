@@ -30,10 +30,12 @@ public class MainPageTest {
     public void search() {
         mainPage.searchButton.click();
 
-        $("[data-test='search-input']").sendKeys("Selenium");
-        $("button[data-test='full-search-button']").click();
+        // Escreve "Selenium" e logo a seguir simula a tecla Enter do teclado!
+        $("[data-test-id='search-input']").sendKeys("Selenium");
+        $("[data-test-id='search-input']").pressEnter();
+        // (Podes apagar a linha que tinha o "full-search-button")
 
-        $("input[data-test='search-input']").shouldHave(attribute("value", "Selenium"));
+        $("input[data-test-id='search-input']").shouldHave(attribute("value", "Selenium"));
     }
 
     @Test
