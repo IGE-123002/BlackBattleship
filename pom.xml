@@ -35,7 +35,7 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>7.6.0</version>
-            <scope>test</scope>
+            <!-- compile scope: necessário para as Page Object Classes em src/main/java -->
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
