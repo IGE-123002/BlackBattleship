@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *   <li>Verificar que os blocos de texto com as regras estão visíveis acima do footer.</li>
  * </ol>
  */
-class UserStoryTest2 {
+class ConsultarInstrucoesTest {
 
     @BeforeAll
     static void setUpAll() {

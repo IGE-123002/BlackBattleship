@@ -32,7 +32,7 @@ import static com.codeborne.selenide.WebDriverConditions.urlContaining;
  *   <li>Abortar o jogo no teardown.</li>
  * </ol>
  */
-class UserStoryTest9 {
+class DispararTest {
 
     @BeforeAll
     static void setUpAll() {

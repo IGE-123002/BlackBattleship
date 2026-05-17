@@ -28,7 +28,7 @@ import static com.codeborne.selenide.Selenide.open;
  *   <li>Verificar que aparece o toast "Profile updated successfully."</li>
  * </ol>
  */
-class UserStoryTest1 {
+class DefinirNicknameTest {
 
     private static final String ORIGINAL_NAME = "ralcao";
     private static final String NEW_NAME = "Rui Coelho";

@@ -10,7 +10,6 @@ import org.junit.jupiter.api.*;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *   <li>Verificar que regressamos à página base do Battleship.</li>
  * </ol>
  */
-class UserStoryTest5 {
+class IniciarJogovsRoboTest {
 
     @BeforeAll
     static void setUpAll() {
