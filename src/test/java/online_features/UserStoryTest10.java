@@ -1,8 +1,10 @@
-package iscteiul.ista.blackbattleship.userstories;
+package online_features;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import iscteiul.ista.blackbattleship.pages.BattleshipMainPage;
+import iscteiul.ista.blackbattleship.pages.LoginPage;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -11,10 +13,6 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.$;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/**
- * Testes de aceitação para a User Story 10 – Uso de Armas Especiais.
- * Valida a funcionalidade de selecionar e utilizar armas especiais durante o jogo.
- */
 public class UserStoryTest10 {
 
     private static final String VALID_USERNAME = "boaspessoal12345678@gmail.com";
@@ -33,23 +31,26 @@ public class UserStoryTest10 {
         loginPage = Selenide.page(LoginPage.class);
         mainPage = Selenide.page(BattleshipMainPage.class);
 
-        // Garantir Login!
         assertTrue(loginPage.ensureLoggedIn(VALID_USERNAME, VALID_PASSWORD),
                 "Não foi possível autenticar o utilizador antes de testar as armas.");
 
         mainPage.openGame();
     }
 
+    @AfterEach
+    void tearDown() {
+        Selenide.closeWebDriver();
+    }
+
     @Test
     @DisplayName("US10 – Uso de Armas Especiais")
     void usoDeArmasEspeciais() {
-        // 1. Abrir o menu de armas especiais
-        mainPage.specialWeaponsMenu.shouldBe(Condition.visible).click();
+        // Limpar anúncios intersticiais antes de interagir
+        mainPage.dismissOverlays();
 
-        // 2. Clicar no míssil grande
+        mainPage.specialWeaponsMenu.shouldBe(Condition.visible).click();
         mainPage.bigMissileOption.shouldBe(Condition.visible).click();
 
-        // 3. Validar a reação visual no DOM
         $("body").shouldHave(Condition.or("confirmação da arma",
                 Condition.text("missile"),
                 Condition.text("míssil"),

@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 
 /**
@@ -78,6 +79,14 @@ public class BattleshipMainPage {
     public static void configureBrowser() {
         Configuration.browserSize = "1280x800";
         Configuration.timeout = 10000;
+
+        // Opções do Chrome para reduzir deteção de automação (reCAPTCHA)
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
+        Configuration.browserCapabilities = options;
+
         // Ativação do Allure Framework para os relatórios da Parte 2
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
@@ -88,8 +97,38 @@ public class BattleshipMainPage {
         // Dar tempo ao framework da página para renderizar os botões do jogo
         Selenide.sleep(2500);
 
-        if (cookieConsentBanner.isDisplayed()) {
-            cookieConsentBanner.click();
-        }
+        // Descartar banner de cookies e anúncios intersticiais do Google
+        dismissOverlays();
+    }
+
+    /**
+     * Remove todos os overlays que possam bloquear a interação:
+     * banner de cookies (FundingChoices) e anúncios intersticiais do Google.
+     * Executa tudo via JavaScript direto para evitar ElementNotInteractableException.
+     */
+    public void dismissOverlays() {
+        // 1) Descartar o banner de cookies
+        Selenide.executeJavaScript(
+                "var btn = document.querySelector('button.fc-cta-consent');" +
+                "if (btn && btn.offsetParent !== null) { btn.click(); }" +
+                "var all = document.querySelectorAll('button');" +
+                "for (var b of all) {" +
+                "  var txt = b.textContent.toLowerCase();" +
+                "  if ((txt.includes('consent') || txt.includes('accept') || txt.includes('agree'))" +
+                "      && b.offsetParent !== null) { b.click(); break; }" +
+                "}"
+        );
+
+        // 2) Remover iframes de anúncios intersticiais do Google que cobrem toda a página
+        Selenide.executeJavaScript(
+                "document.querySelectorAll('iframe[id*=\"google_ads\"], iframe[id*=\"aswift\"]').forEach(function(f){ f.remove(); });" +
+                "document.querySelectorAll('div[id*=\"google_ads\"], div[id*=\"ad-slot\"], ins.adsbygoogle').forEach(function(d){ d.remove(); });" +
+                "document.querySelectorAll('div').forEach(function(d){" +
+                "  var s = window.getComputedStyle(d);" +
+                "  if (s.position === 'fixed' && s.zIndex > 999 && d.querySelector('iframe')) { d.remove(); }" +
+                "});"
+        );
+
+        Selenide.sleep(500);
     }
 }
